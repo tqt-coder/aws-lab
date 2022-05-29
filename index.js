@@ -15,9 +15,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(cors());
 
-const RouterPage = require('./Router/RouterPage');
+const RouterPage = require('./router/RouterPage');
 app.use('/', RouterPage);
-const AccountRouter = require('./Router/AccountRouter');
+const AccountRouter = require('./router/AccountRouter');
 app.use('/account', AccountRouter);
 
 console.log(`Orders service listening on port ${port}`);
