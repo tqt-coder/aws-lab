@@ -1,4 +1,4 @@
-const personModel = require('../Model/PersonModel');
+const personModel = require('../model/PersonModel');
 
 exports.createNewRecord = (req, res) => {
   let sqsData = req.body;

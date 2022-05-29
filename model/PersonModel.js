@@ -40,5 +40,5 @@ async function callAPI(data) {
     });
 }
 module.exports = {
-  callAPI: callAPI,
+callAPI: callAPI,
 };
