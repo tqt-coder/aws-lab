@@ -1,4 +1,4 @@
-const ip = '';
+const ip = 'http://34.200.201.169:8888';
 function callAPI(a, b) {
   $.ajax({
     type: 'POST',
