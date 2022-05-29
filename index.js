@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 var cors = require('cors');
 var cookieParser = require('cookie-parser');
+require('dotenv').config();
 const path = require('path');
+var router = express.Router();
 
 const port = 8888;
 const app = express();
@@ -13,9 +15,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(cors());
 
-const RouterPage = require('./router/Routerpage');
-const AccountRouter = require('./router/AccountRouter');
+const RouterPage = require('./Router/RouterPage');
 app.use('/', RouterPage);
+const AccountRouter = require('./Router/AccountRouter');
 app.use('/account', AccountRouter);
 
 console.log(`Orders service listening on port ${port}`);
